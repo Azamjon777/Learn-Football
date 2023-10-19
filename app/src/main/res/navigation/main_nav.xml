@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_onBoard1Fragment"
+            app:destination="@id/onBoard1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board">
+        <action
+            android:id="@+id/action_onBoardFragment_to_selectLanguageFragment"
+            app:destination="@id/selectLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.SelectLanguageFragment"
+        android:label="fragment_select_language"
+        tools:layout="@layout/fragment_select_language">
+        <action
+            android:id="@+id/action_selectLanguageFragment_to_leaguesFragment"
+            app:destination="@id/leaguesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaguesFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.LeaguesFragment"
+        android:label="fragment_leagues"
+        tools:layout="@layout/fragment_leagues">
+        <action
+            android:id="@+id/action_leaguesFragment_to_leagueTableFragment"
+            app:destination="@id/leagueTableFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leagueTableFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.LeagueTableFragment"
+        android:label="fragment_league_table"
+        tools:layout="@layout/fragment_league_table">
+        <argument
+            android:name="LeagueTeams"
+            app:argType="ganraack.errrw.learnfootball.model.LeagueModel" />
+        <action
+            android:id="@+id/action_leagueTableFragment_to_oneTeamFragment"
+            app:destination="@id/oneTeamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneTeamFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.OneTeamFragment"
+        android:label="fragment_one_team"
+        tools:layout="@layout/fragment_one_team">
+        <argument
+            android:name="TeamPlayers"
+            app:argType="ganraack.errrw.learnfootball.model.TeamsModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/topCoachesFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.TopCoachesFragment"
+        android:label="fragment_top_coaches"
+        tools:layout="@layout/fragment_top_coaches" />
+    <fragment
+        android:id="@+id/topClubsFragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.TopClubsFragment"
+        android:label="fragment_top_clubs"
+        tools:layout="@layout/fragment_top_clubs" />
+    <fragment
+        android:id="@+id/onBoard1Fragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.OnBoard1Fragment"
+        android:label="fragment_on_board1"
+        tools:layout="@layout/fragment_on_board1" >
+        <action
+            android:id="@+id/action_onBoard1Fragment_to_onBoard2Fragment"
+            app:destination="@id/onBoard2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard2Fragment"
+        android:name="ganraack.errrw.learnfootball.presentation.fragments.OnBoard2Fragment"
+        android:label="fragment_on_board2"
+        tools:layout="@layout/fragment_on_board2" >
+        <action
+            android:id="@+id/action_onBoard2Fragment_to_onBoardFragment"
+            app:destination="@id/onBoardFragment" />
+    </fragment>
+</navigation>
